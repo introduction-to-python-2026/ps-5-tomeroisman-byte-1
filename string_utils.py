@@ -1,3 +1,8 @@
+def parse_chemical_reaction(reaction_equation):
+    reaction_equation = reaction_equation.replace(" ", "")
+    reactants, products = reaction_equation.split("->")
+    return reactants.split("+"), products.split("+")
+
 def split_before_each_uppercases(formula):
     end = 1
     start = 0
@@ -36,11 +41,6 @@ def count_atoms_in_molecule(molecular_formula):
         else:
             atom_counts[atom_name] = atom_count
     return atom_counts
-
-def parse_chemical_reaction(reaction_equation):
-    reaction_equation = reaction_equation.replace(" ", "")
-    reactants, products = reaction_equation.split("->")
-    return reactants.split("+"), products.split("+")
 
 def count_atoms_in_reaction(molecules_list):
     molecules_atoms_count = []
