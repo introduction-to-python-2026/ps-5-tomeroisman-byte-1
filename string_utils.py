@@ -37,7 +37,7 @@ def count_atoms_in_molecule(molecular_formula):
             atom_counts[atom_name] = atom_count
     return atom_counts
 
-def balance_reaction(reaction_equation):
+def parse_chemical_reaction(reaction_equation):
     reaction_equation = reaction_equation.replace(" ", "")
     reactants, products = reaction_equation.split("->")
     return reactants.split("+"), products.split("+")
