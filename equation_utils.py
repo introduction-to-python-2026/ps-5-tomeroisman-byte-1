@@ -48,4 +48,4 @@ def my_solve(equations, coefficients):
         for coefficient in coefficients:
             coefficient_values.append(float(solution[coefficient]))
         return coefficient_values
-    return []
+    return []
